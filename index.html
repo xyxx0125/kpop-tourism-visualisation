@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>K-pop Popularity and Tourism to South Korea</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- D3 -->
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <!-- TopoJSON for maps -->
+  <script src="https://unpkg.com/topojson@3"></script>
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<!-- ================= LANDING PAGE ================= -->
+<section id="landing-page" class="page active">
+  <div class="container hero">
+
+    <h1>K-pop Popularity and Tourism to South Korea</h1>
+
+    <div class="panel">
+      <h2>Hypothesis</h2>
+      <p>
+        Countries with higher levels of K-pop attention tend to send more visitors
+        to South Korea per 100,000 population.
+      </p>
+    </div>
+
+    <div class="panel">
+      <h2>Methodology</h2>
+      <p>
+        This study combines international tourism arrivals with a K-pop attention
+        index derived from digital cultural signals. Tourism figures are normalised
+        by national population to allow meaningful cross-country comparison.
+      </p>
+    </div>
+
+    <button class="cta" onclick="showAnalysis()">Explore the data</button>
+
+  </div>
+</section>
+
+<!-- ================= ANALYSIS PAGE ================= -->
+<section id="analysis-page" class="page">
+  <div class="container">
+
+    <button class="back-btn" onclick="showLanding()">Back</button>
+
+    <div class="section">
+        <h3>K-pop Attention vs Visitors</h3>
+        <p>
+            Countries with higher K-pop attention tend to show higher visitor rates per
+            100,000 population.
+        </p>
+        <div class="chart" id="scatter-plot"></div>
+    </div>
+
+    <div class="section">
+        <h3>Global Distribution of K-pop Attention</h3>
+        <p>
+            Darker shading indicates higher levels of K-pop attention across countries.
+        </p>
+        <div class="chart" id="attention-map"></div>
+    </div>
+
+    <div class="section">
+        <h3>Visitors to South Korea per Capita</h3>
+        <p>
+            Larger markers represent higher visitor rates per 100,000 population.
+        </p>
+        <div class="chart" id="visitors-map"></div>
+    </div>
+
+    <div class="section">
+        <h3>K-Pop Events Impact on Tourism</h3>
+        <p>
+            Countries with major K-Pop events show higher visitor rates to South Korea.
+            The United States (highlighted in red) serves as a key example.
+        </p>
+        <div class="chart" id="events-chart"></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Scripts -->
+<script src="script.js"></script>
+
+</body>
+</html>
